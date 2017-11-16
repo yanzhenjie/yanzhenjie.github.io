@@ -64,6 +64,11 @@
                 alert("App端返回：" + headerJson);
     	    });
     	}
+    	function selectAddress() {
+    	    app.selectAddress(function(addressJson) {
+                alert("App端返回：" + addressJson);
+    	    });
+    	}
     </script>
 </head>
 <body>
@@ -101,6 +106,8 @@
     <button onClick="paramSign()" type="button">不必登录参数签名</button>
     <br/><br/>
     <button onClick="paramSignLogin()" type="button">须登录的参数签名</button>
+    <br/><br/>
+    <button onClick="selectAddress()" type="button">选择收货地址</button>
     <br/><br/>
 
     <p>以下是URL外部唤醒妈妈去哪儿App，可以在手机自带浏览器打开此网页测试</p>
