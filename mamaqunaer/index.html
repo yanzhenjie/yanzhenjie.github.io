@@ -9,6 +9,15 @@
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <script src="app_api.js"></script>
     <script type="text/javascript">
+    	function initialize() {
+    		app.initialize();
+    	}
+    	function isLogin() {
+    		alert(app.isLogin());
+    	}
+    	function getUserId() {
+    		alert(app.getUserId());
+    	}
     	function isApp() {
     		alert(app.isApp());
     	}
@@ -71,8 +80,12 @@
     	}
     </script>
 </head>
-<body>
+<body onload="initialize()">
 <div>
+	<button onClick="isLogin()" type="button">用户是否登录</button>
+    <br/><br/>
+    <button onClick="isLogin()" type="button">用户ID</button>
+    <br/><br/>
     <button onClick="isApp()" type="button">是否是App</button>
     <br/><br/>
     <button onClick="joinMM()" type="button">加入妈妈去哪儿</button>
