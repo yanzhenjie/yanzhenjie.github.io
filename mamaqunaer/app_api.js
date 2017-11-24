@@ -1,5 +1,8 @@
 (function (window) {
     var app = {};
+    app.initialize(){
+        app.a(-1)
+    }
     app.userInfo = {
         "userId": ""
     };
@@ -65,6 +68,10 @@
     app.a = function (d, c) {
         try {
             switch (d) {
+                case -1:
+                    mmClient.initialize();
+                    app.s(150);
+                    break;
                 case 0:
                     mmClient.joinPlatform();
                     break;
@@ -144,5 +151,14 @@
             }
         }
     };
+    function s(m) {
+        var a = new Date();
+        var e = a.getTime() + m;
+        while (true) {
+            n = new Date();
+            if (n.getTime() > e)
+            return;
+        }
+    }
     window.app = app;
 }(window))
