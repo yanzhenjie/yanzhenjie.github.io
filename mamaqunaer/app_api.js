@@ -3,7 +3,7 @@
     app.userInfo = {
         "userId": ""
     };
-    app.setUserInfo(userId) {
+    app.setUserId(userId) {
         app.userInfo.userId = userId;
     }
     app.isLogin = function () {
