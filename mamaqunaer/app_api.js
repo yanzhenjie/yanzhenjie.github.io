@@ -112,7 +112,8 @@
             so.f = f;
             so.d = d;
             so.h = h;
-            so.e = function () {};
+            so.e = function () {
+            };
             app.sa.push(so);
             app.eso();
         }
@@ -138,6 +139,7 @@
             app.esoq();
         }
         app.esoq = function () {
+            if (app.sa.length <= 0) return;
             try {
                 var so = app.sa[0];
                 mmClient.paramSign(so.f, so.d);
@@ -149,7 +151,8 @@
         app.selectAddress = function (b) {
             var ao = new Object();
             ao.b = b;
-            ao.e = function () {};
+            ao.e = function () {
+            };
             app.eao();
         }
         app.selectAddress = function (b, e) {
@@ -171,6 +174,7 @@
             app.eaoq();
         }
         app.eaoq = function () {
+            if (app.aa.length <= 0) return;
             try {
                 var ao = app.aa[0];
                 mmClient.selectAddress();
