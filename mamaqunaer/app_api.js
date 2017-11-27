@@ -108,9 +108,11 @@
         }
         app.sa = new Array();
         app.paramSign = function (f, d, h) {
+        	console.log("paramSign 3");
             app.paramSign(f, d, h, app.erph);
         }
         app.paramSign = function (f, d, h, e) {
+        	console.log("paramSign 4");
             var so = new Object();
             so.f = f;
             so.d = d;
@@ -145,9 +147,11 @@
         }
         app.aa = new Array();
         app.selectAddress = function (b) {
+        	console.log("selectAddress 1");
             app.selectAddress(b, app.erph);
         }
         app.selectAddress = function (b, e) {
+        	console.log("selectAddress 2");
             var ao = new Object();
             ao.b = b;
             ao.e = e;
