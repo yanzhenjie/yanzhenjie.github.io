@@ -122,7 +122,7 @@
         app.paramSignCallback = function (a) {
             if ("error" == a) {
                 var so = app.sa.shift();
-                console.log(ao.e);
+                console.log(so.e);
                 so.e();
             } else {
                 var so = app.sa.shift();
@@ -156,7 +156,7 @@
         }
         app.selectAddressCallback = function (a) {
             if ("error" == a) {
-                var so = app.aa.shift();
+                var ao = app.aa.shift();
                 console.log(ao.e);
                 ao.e();
             } else {
