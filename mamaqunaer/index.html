@@ -9,75 +9,111 @@
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <script src="app_api.js"></script>
     <script type="text/javascript">
-    	function initialize() {
-    		app.initialize();
-    	}
-    	function isLogin() {
-    		alert(app.isLogin());
-    	}
-    	function getUserId() {
-    		alert("用户ID是" + app.getUserId());
-    	}
-    	function isApp() {
-    		alert(app.isApp());
-    	}
-    	function joinMM() {
-    		app.joinPlatform();
-    	}
-    	function joinBdt() {
-    		app.joinBdt();
-    	}
-    	function shop() {
-    		app.shop(173);
-    	}
-    	function goods() {
-    		app.goods(1431);
-    	}
-    	function activity() {
-    		app.activity(253);
-    	}
-    	function topic() {
-    		app.topic(253);
-    	}
-    	function post() {
-    		app.post(253);
-    	}
-    	function closeApp() {
-    		app.closeWindow();
-    	}
-    	function share() {
-    		app.shareMe();
-    	}
-    	function coupon() {
-    		app.coupon();
-    	}
-    	function baodou() {
-    		app.baodou();
-    	}
-    	function order() {
-    		app.order();
-    	}
-    	function voucher() {
-    		app.voucher();
-    	}
-    	function collect() {
-    		app.collect();
-    	}
-    	function paramSign() {
-    	    app.paramSign(false, '{"name":"yanzhenjie"}', function(headerJson) {
-                alert("App端返回：" + headerJson);
-    	    });
-    	}
-    	function paramSignLogin() {
-    	    app.paramSign(true, '{"name":"yanzhenjie"}', function(headerJson) {
-                alert("App端返回：" + headerJson);
-    	    });
-    	}
-    	function selectAddress() {
-    	    app.selectAddress(function(addressJson) {
-                alert("App端返回：" + addressJson);
-    	    });
-    	}
+        function initialize() {
+            app.initialize();
+        }
+
+        function isLogin() {
+            alert(app.isLogin());
+        }
+
+        function login() {
+            app.login(function () {
+                alert("登录成功");
+            }, function () {
+                alert("登录失败");
+            });
+        }
+
+        function getUserId() {
+            alert("用户ID是" + app.getUserId());
+        }
+
+        function isApp() {
+            alert(app.isApp());
+        }
+
+        function joinMM() {
+            app.joinPlatform();
+        }
+
+        function joinBdt() {
+            app.joinBdt();
+        }
+
+        function shop() {
+            app.shop(173);
+        }
+
+        function goods() {
+            app.goods(1431);
+        }
+
+        function activity() {
+            app.activity(253);
+        }
+
+        function topic() {
+            app.topic(253);
+        }
+
+        function post() {
+            app.post(253);
+        }
+
+        function closeApp() {
+            app.closeWindow();
+        }
+
+        function share() {
+            app.shareMe();
+        }
+
+        function coupon() {
+            app.coupon();
+        }
+
+        function baodou() {
+            app.baodou();
+        }
+
+        function order() {
+            app.order();
+        }
+
+        function voucher() {
+            app.voucher();
+        }
+
+        function collect() {
+            app.collect();
+        }
+
+        function request() {
+            function er() {
+                app.request("/v1/user/profile", "GET", "{}", "{}", function (a) {
+                    alert("用户个人信息：" + a);
+                });
+            }
+
+            if (app.isLogin()) {
+                er();
+            } else {
+                app.login(function () {
+                    er();
+                }, function () {
+                    alert("请求失败，因为用户拒绝登录");
+                });
+            }
+        }
+
+        function selectAddress() {
+            app.selectAddress(function (addressJson) {
+                alert("用户选择的地址：" + addressJson);
+            }, function () {
+                alert("选择地址失败");
+            });
+        }
     </script>
 </head>
 <body onload="initialize()">
