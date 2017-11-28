@@ -90,20 +90,25 @@
         }
 
         function request() {
-            function er() {
-                app.request("/v1/user/profile", "GET", function (a) {
-                    alert("用户个人信息：" + a);
+            function exeRequest() {
+                function handlerUser(info) {
+                    alert("用户个人信息：" + info);
+                }
+
+                app.request({
+                    path: "/v1/user/profile",
+                    method: "GET",
+                    callback: handlerUser(),
+                    data: {},
+                    headers: {}
                 });
-                // app.request("/v1/user/profile", "GET", function (a) {
-                //    alert("用户个人信息：" + a);
-                // }, "{}", "{}");
             }
 
             if (app.isLogin()) {
-                er();
+                exeRequest();
             } else {
                 app.login(function () {
-                    er();
+                    exeRequest();
                 }, function () {
                     alert("请求失败，因为用户拒绝登录");
                 });
