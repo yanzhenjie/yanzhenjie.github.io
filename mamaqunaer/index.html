@@ -91,9 +91,12 @@
 
         function request() {
             function er() {
-                app.request("/v1/user/profile", "GET", "{}", "{}", function (a) {
+                app.request("/v1/user/profile", "GET", function (a) {
                     alert("用户个人信息：" + a);
                 });
+                // app.request("/v1/user/profile", "GET", function (a) {
+                //    alert("用户个人信息：" + a);
+                // }, "{}", "{}");
             }
 
             if (app.isLogin()) {
