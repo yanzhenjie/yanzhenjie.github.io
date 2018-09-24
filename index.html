@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>严振杰</title>
-    <meta name="Keywords"
-          content="严振杰,严振杰的主页,严振杰的博客,严振杰CSDN"/>
-    <meta name="Description"
-    content="他说正直刚烈，嫉恶如仇，且有勇有谋，文武双全。AndServer是Android上的WebServer+WebFramework，基于编译时注解实现了SpringMVC的注解Api，可以完全像SpringMVC一样在Android上做Web开发。可以部署前后分离的网站，目前正在研究模板接入模板引擎。"/>
+    <meta name="Keywords" content="严振杰,严振杰的主页,严振杰的博客,严振杰CSDN" />
+    <meta name="Description" content="他说正直刚烈，嫉恶如仇，且有勇有谋，文武双全。AndServer是Android上的WebServer+WebFramework，基于编译时注解实现了SpringMVC的注解Api，可以完全像SpringMVC一样在Android上做Web开发。可以部署前后分离的网站，目前正在研究模板接入模板引擎。" />
 
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
@@ -51,31 +50,35 @@
         }
     </style>
 </head>
+
 <body>
-<div id="app" align="center"></div>
-<script src="./assets/bundle.js"></script>
-<script src="./assets/mouse.js"></script>
+    <div id="app" align="center"></div>
+    <script src="./assets/bundle.js"></script>
+    <script src="./assets/mouse.js"></script>
 
-<div id="comment" class="comment" align="center">
-    <div id="SOHUCS"></div>
-</div>
-<script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
-<script type="text/javascript">
-    window.changyan.api.config({
-        appid: 'cyt39Pcz0',
-        conf: 'prod_9d7b31baa9ee073b08126a5950a3260e'
-    });
-</script>
+    <div id="comment" class="comment" align="center">
+        <div id="SOHUCS"></div>
+    </div>
+    <script type="text/javascript">
+        (function () {
+            var appid = 'cyt39Pcz0';
+            var conf = 'prod_9d7b31baa9ee073b08126a5950a3260e';
+            var width = window.innerWidth || document.documentElement.clientWidth;
+            if (width < 960) {
+                window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
+            } else { var loadJs = function (d, a) { var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement; var b = document.createElement("script"); b.setAttribute("type", "text/javascript"); b.setAttribute("charset", "UTF-8"); b.setAttribute("src", d); if (typeof a === "function") { if (window.attachEvent) { b.onreadystatechange = function () { var e = b.readyState; if (e === "loaded" || e === "complete") { b.onreadystatechange = null; a() } } } else { b.onload = a } } c.appendChild(b) }; loadJs("https://changyan.sohu.com/upload/changyan.js", function () { window.changyan.api.config({ appid: appid, conf: conf }) }); }
+        })(); </script>
 
-<div style="display: none;">
-    <script src="http://s11.cnzz.com/z_stat.php?id=1260557333&web_id=1260557333"></script>
-</div>
-<div class="beian-height" style="width:300px;margin:0 auto;padding: 20px 0;" align="center">
-	<p class="beian-height beian-color" style="width:180px;margin:0 auto;" align="center">浙ICP备16016006号</p>
-    <a class="beian-a" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010302001446">
-        <img src="./images/beian.png" style="float:left;"/>
-        <p class="beian-color" style="float:left;margin: 0px 5px;">浙公网安备 33010302001446号</p>
-    </a>
-</div>
+    <div style="display: none;">
+        <script src="https://s11.cnzz.com/z_stat.php?id=1260557333&web_id=1260557333" language="JavaScript"></script>
+    </div>
+    <div class="beian-height" style="width:300px;margin:0 auto;padding: 20px 0;" align="center">
+        <p class="beian-height beian-color" style="width:180px;margin:0 auto;" align="center">浙ICP备16016006号</p>
+        <a class="beian-a" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010302001446">
+            <img src="./images/beian.png" style="float:left;" />
+            <p class="beian-color" style="float:left;margin: 0px 5px;">浙公网安备 33010302001446号</p>
+        </a>
+    </div>
 </body>
+
 </html>
