@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>严振杰</title>
-    <meta name="Keywords" content="严振杰,严振杰的主页,严振杰的博客,严振杰CSDN" />
-    <meta name="Description" content="他说正直刚烈，嫉恶如仇，且有勇有谋，文武双全。AndServer是Android上的WebServer+WebFramework，基于编译时注解实现了SpringMVC的注解Api，可以完全像SpringMVC一样在Android上做Web开发。可以部署前后分离的网站，目前正在研究模板接入模板引擎。" />
+    <meta name="Keywords" content="严振杰,严振杰官网,严振杰博客,严振杰CSDN,CSDN严振杰" />
+    <meta name="Description" content="他说正直刚烈，嫉恶如仇，且有勇有谋，文武双全。擅长技术选型、架构设计和性能调优；具有丰富的框架设计与开发经验；在中小型公司带过团队；在国外技术社区比较活跃，有一定的技术影响力。" />
 
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
@@ -30,17 +30,20 @@
             width: 95%;
             margin: 0 auto;
         }
-		.beian-height {
-    			height:20px;
-    			line-height:20px;
-		}
+
+        .beian-height {
+            height: 20px;
+            line-height: 20px;
+        }
+
         .beian-color {
-				color:#939393;
-		}
-		.beian-a {
-				display:inline-block;
-				text-decoration:none;
-		}
+            color: #939393;
+        }
+
+        .beian-a {
+            display: inline-block;
+            text-decoration: none;
+        }
 
         @media (min-width: 768px) {
             .comment {
@@ -56,29 +59,24 @@
     <script src="./assets/bundle.js"></script>
     <script src="./assets/mouse.js"></script>
 
-    <div id="comment" class="comment" align="center">
-        <div id="SOHUCS"></div>
-    </div>
-    <script type="text/javascript">
-        (function () {
-            var appid = 'cyt39Pcz0';
-            var conf = 'prod_9d7b31baa9ee073b08126a5950a3260e';
-            var width = window.innerWidth || document.documentElement.clientWidth;
-            if (width < 960) {
-                window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
-            } else { var loadJs = function (d, a) { var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement; var b = document.createElement("script"); b.setAttribute("type", "text/javascript"); b.setAttribute("charset", "UTF-8"); b.setAttribute("src", d); if (typeof a === "function") { if (window.attachEvent) { b.onreadystatechange = function () { var e = b.readyState; if (e === "loaded" || e === "complete") { b.onreadystatechange = null; a() } } } else { b.onload = a } } c.appendChild(b) }; loadJs("https://changyan.sohu.com/upload/changyan.js", function () { window.changyan.api.config({ appid: appid, conf: conf }) }); }
-        })(); </script>
+    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js"></script>
+    <script src="//unpkg.com/valine@1.3.4/dist/Valine.min.js"></script>
+
+    <comment id="comment" class="comment" align="center" />
+    <script>
+        new Valine({
+            el: "#comment",
+            appId: "uUJ58UHR6Q7ezE7QwInNe5UP-gzGzoHsz",
+            appKey: "9Hs2JzFrVSVE2JdVFid4EJBK",
+            meta: ['nick'],
+            placeholder: "嗨，这位朋友，留言记得填写昵称哦",
+            avatar: "hide",
+            visitor: "true"
+        });
+    </script>
 
     <div style="display: none;">
-        <script src="https://s11.cnzz.com/z_stat.php?id=1260557333&web_id=1260557333" language="JavaScript"></script>
-    </div>
-    <div class="beian-height" style="width:300px;margin:0 auto;padding: 20px 0;" align="center">
-        <p class="beian-height beian-color" style="width:180px;margin:0 auto;" align="center">浙ICP备16016006号</p>
-        <a class="beian-a" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010302001446">
-            <img src="./images/beian.png" style="float:left;" />
-            <p class="beian-color" style="float:left;margin: 0px 5px;">浙公网安备 33010302001446号</p>
-        </a>
+        <script src="//s11.cnzz.com/z_stat.php?id=1260557333&web_id=1260557333" language="JavaScript"></script>
     </div>
 </body>
-
 </html>
