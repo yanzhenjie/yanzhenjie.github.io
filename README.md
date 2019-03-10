@@ -1,8 +1,8 @@
 这是我的个人主页源码，基于React构建。  
 
-页面数据也放在GitHub了，后期计划基于LeanCloud做一个小型的后台来管理数据。  
+页面数据放在GitHub，评论系统使用Valine，数据库基于LeanCloud。
 
-评论系统由畅言更换为Valine，Valine的数据库基于LeanCloud。
+计划未来基于LeanCloud做一个小型后台来管理数据，把个人页面的数据也放到LeanCooud。  
 
 `Valine`和`LeanCloud`没有使用`npm`一起打包，而采用了在页面中通过`CDN`引入的方式，这样做的目的是减小`bundle.js`的大小，由不同的服务器分担流量，加快页面加载速度。  
 
